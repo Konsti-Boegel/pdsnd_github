@@ -11,6 +11,7 @@ cities = ['chicago', 'new york city', 'washington']
 months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 days = ['all', 'm', 'tu', 'w', 'th', 'f', 'sa', 'su']
 
+# create variable to save the filtered city
 chosen_city = ''
 
 def get_filters():
