@@ -99,7 +99,7 @@ def load_data(city, month, day):
     else:
         df = df.astype({'Trip Duration': int, 'Start Station': str, 'End Station': str, 'User Type': str})
 
-    # Extract Month and Weekday (Monday=0 ... Sunday=6) to separate columns
+    # Extract Month, Weekday (Monday=0 ... Sunday=6) and Hour to separate columns
 
     df['month'] = df['Start Time'].dt.month
     df['day'] = df['Start Time'].dt.weekday
