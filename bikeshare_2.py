@@ -49,7 +49,7 @@ def get_filters():
         else:
             print('Invalid answer. Please try again.')
 
-    # get user input for day of week (all, monday, tuesday, ... sunday)
+    # get user input for day of week (all, monday (M), tuesday (Tu), ... sunday (Su))
 
     valid = True
 
