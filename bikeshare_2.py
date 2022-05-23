@@ -266,11 +266,12 @@ def main():
 
         raw_input = input('\nWould you like to see the raw data? Enter yes or no.\n')
         if raw_input.lower() == 'yes':
-            index = [0,5]
+            i = 0
+            j = 5
             while keep_going:
-                print(df.iloc[index[0]:index[1]])
-                index[0] += 5
-                index[1] += 5
+                print(df.iloc[i:j])
+                i += 5
+                j += 5
 
                 more = input('Do you want to see 5 more rows? Enter yes or no.\n')
                 if more.lower() != 'yes':
