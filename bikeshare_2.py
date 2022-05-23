@@ -264,8 +264,11 @@ def main():
 
         keep_going = True
 
-        raw_input = input('\nWould you like to see the raw data? Enter yes or no.\n')
-        if raw_input.lower() == 'yes':
+        while True:
+            raw_input = input('\nWould you like to see the raw data? Enter yes or no.\n')
+            if raw_input.lower() != 'yes':
+                break
+
             i = 0
             j = 5
             while keep_going:
@@ -277,6 +280,7 @@ def main():
                 if more.lower() != 'yes':
                     keep_going = False
                     break
+            break
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
