@@ -270,19 +270,25 @@ def main():
         user_stats(df)
 
         keep_going = True
+        pd.set_option('display.max_columns',200)
 
-        raw_input = input('\nWould you like to see the raw data? Enter yes or no.\n')
-        if raw_input.lower() == 'yes':
-            index = [0,5]
+        while True:
+            raw_input = input('\nWould you like to see the raw data? Enter yes or no.\n')
+            if raw_input.lower() != 'yes':
+                break
+
+            i = 0
+            j = 5
             while keep_going:
-                print(df.iloc[index[0]:index[1]])
-                index[0] += 5
-                index[1] += 5
+                print(df.iloc[i:j])
+                i += 5
+                j += 5
 
                 more = input('Do you want to see 5 more rows? Enter yes or no.\n')
                 if more.lower() != 'yes':
                     keep_going = False
                     break
+            break
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
