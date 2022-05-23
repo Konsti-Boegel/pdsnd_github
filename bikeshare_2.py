@@ -263,6 +263,7 @@ def main():
         user_stats(df)
 
         keep_going = True
+        pd.set_option('display.max_columns',200)
 
         while True:
             raw_input = input('\nWould you like to see the raw data? Enter yes or no.\n')
